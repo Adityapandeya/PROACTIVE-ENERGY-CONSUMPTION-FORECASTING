@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Energy Consumption Prediction</title>
+    <link rel="stylesheet" href="{{url_for('static',filename = 'style.css')}}">
+</head>
+<body>
+    <h1>Energy Consumption Prediction</h1>
+    <hr style="border: 1px solid rgb(1, 1, 15); width:40%">
+
+    <div class="c">
+        <div class="i"><img src="{{url_for('static',filename = 'coal.jpg')}}" alt = "no image">
+            <img src="{{url_for('static',filename = 'nuclear.png')}}" alt = "no image">
+            <img src="{{url_for('static',filename = 'oil.jpeg')}}" alt = "no image">
+        </div>
+    <div class="f">
+    <form id="prediction-form" action="/predict" method="post">
+        
+        <label for="nuclear">Nuclear Production:</label><br>
+        <input type="number" id="nuclear" name="nuclear" required><br>
+
+        <!-- Input fields for other energy sources -->
+        <label for="wind">Wind Production:</label><br>
+        <input type="number" id="wind" name="wind" required><br>
+        
+        <label for="hydroelectric">Hydroelectric Production:</label><br>
+        <input type="number" id="hydroelectric" name="hydroelectric" required><br>
+        
+        <label for="oil-gas">Oil and Gas Production:</label><br>
+        <input type="number" id="oil-gas" name="oil-gas" required><br>
+        
+        <label for="coal">Coal Production:</label><br>
+        <input type="number" id="coal" name="coal" required><br>
+        
+        <label for="solar">Solar Production:</label><br>
+        <input type="number" id="solar" name="solar" required><br>
+        
+        <label for="biomass">Biomass Production:</label><br>
+        <input type="number" id="biomass" name="biomass" required><br>
+
+        <input type="submit" value="Predict">
+    </form>
+    </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Energy Consumption Prediction</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='predict1.css')}}">
+</head>
+<body>
+    <div class="container">
+        <h1>Energy Consumption Prediction Result</h1>
+        
+        <!-- Display the prediction result -->
+        {% if prediction_result %}
+        <div class="prediction-result">
+            <h2 id="prediction-value">{{ prediction_result }}</h2>
+        </div>
+
+        <div class="production">
+            <h2>Total Energy production from different sources : {{ production }}</h2>
+        </div>
+        {% endif %}
+        
+        <!-- Add a button to go back to the home page -->
+        <a href="/">Go back to Home</a>
+    </div>
+
+</body>
+</html>
